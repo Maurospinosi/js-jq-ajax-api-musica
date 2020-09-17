@@ -23,9 +23,18 @@ header {
 }
 header img {
     height: 50px;
-    margin-top: 10px;
 }
-
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex label{
+  color: red;
+}
+.flex select{
+  padding: 10px;
+}
 .cds-container {
     display: flex;
     justify-content: center;

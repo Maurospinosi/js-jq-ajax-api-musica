@@ -13,6 +13,17 @@ $(document).ready(function() {
       }
     }
   );
+
+  // Bonus:
+  // Creare una select con i seguenti generi: pop, rock, metal e jazz.
+  // In base a cosa scegliamo nella select vedremo solo i corrispondenti cd.
+  var arrayGeneri = ['Rock','Pop','Jaaz','Metal'],
+  gen = document.getElementById('gen');
+
+  for( generi in arrayGeneri) {
+    gen.add( new Option(arrayGeneri[generi]));
+  };
+
 });
 
 function albumMusica (resp){
@@ -27,7 +38,6 @@ function albumMusica (resp){
       "genere" : resp[i].genre,
       "anno" : resp[i].year,
     };
-
 
     var html = template(context);
     $(".appeso").append(html);
