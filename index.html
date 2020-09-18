@@ -14,23 +14,27 @@
                 <img src="logo.png" alt="logo" />
                 <div class="">
                   <label for="Genere">Seleziona il genere :</label>
-
-                  <select name="genere" id="gen"></select>
+                  <select name="genere" class="genere">
+                    <option value=" ">All</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jaaz">Jaaz</option>
+                    <option value="Metal">Metal</option>
+                  </select>
                 </div>
             </div>
         </header>
 
-        <div class="cds-container container appeso">
+        <div class="cds-container container">
 
         </div>
 
         <script id="album-template" type="text/x-handlebars-template">
-          <div class="cd">
-              <img src="{{copertina}}" alt="">
-              <h3>{{titolo}}</h3>
-              <span>{{autore}}</span>
-              <span>{{genere}}</span>
-              <span>{{anno}}</span>
+          <div class="cd" data-genere="{{genre}}">
+              <img src="{{poster}}" alt="">
+              <h3>{{title}}</h3>
+              <span>{{author}}</span>
+              <span>{{year}}</span>
           </div>
         </script>
 
